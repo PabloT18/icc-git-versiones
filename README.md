@@ -5,6 +5,9 @@
 
 Este proyecto es una práctica de cómo usar Git para control de versiones en un entorno de desarrollo Java. El proyecto incluye ejemplos simples de código Java y demuestra cómo manejar diferentes versiones usando tags anotados en Git.
 
+## Requisitos
+- Java JDK 11 o superior
+- Git 2.20 o superior
 
 
 ### Paso 1: Crear un Proyecto Simple de Java
@@ -86,12 +89,46 @@ Se puede crear el proyecto directamente con VSCode
 
 3. **Crear un tag anotado y subirlo:**
    ```bash
-   git tag -a v1.0.0 -m "Versión 1.0.0"
-   git push origin v1.0.0
+   git tag -a v1.0.1 -m "App v1.0.1"
+   git push origin v1.0.1
    ```
 
 ### Paso 5: Repetir para Versiones Adicionales
 
-Repite el paso 4 para las versiones adicionales (por ejemplo, v1.1.0, v1.2.0, v1.3.0), modificando el `README.md` y el código de ser necesario, actualizando el mensaje de commit y el tag según corresponda.
+Recuerada que adicional a la descripción especifica se debera modificar el `README.md` adicionando la informacion de la version 
 
-Estos pasos cubren la creación de un proyecto simple, el manejo de control de versiones con Git, y el uso de tags anotados para manejar releases. Es importante familiarizarse con más comandos y opciones de Git para poder adaptarse a diferentes flujos de trabajo y necesidades del proyecto.
+   ```markdown
+   # Mi Proyecto Java
+   Este es un proyecto Java simple para demostrar el manejo de versiones con Git.
+
+   ## Version 1.0.0
+   - Versión inicial del proyecto.
+
+   ## Version X.X.X
+   - [Descripcion de la version ]
+   ```
+
+#### Versión v1.0.2: Estructura MVC y Clase de Modelo
+
+1. **Descripción:**
+   - Crea la estructura de carpetas MVC (Model-View-Controller).
+   - Añade una clase de tipo objeto (como `Persona`) en la carpeta de modelos con los métodos y atributos necesarios. No se permite Objetos `Persona`, `Vehiculo o Carro`
+
+2. **Comandos de Git:**
+   ```bash
+   git add .
+   git commit -m "Agregada estructura MVC y clase modelo Object"
+   git tag -a v1.0.2 -m "Versión 1.0.2: Estructura MVC y modelo Object implementados"
+   git push 
+   git push origin --tags
+   ```
+
+
+
+## Contribuir
+
+Para contribuir a este proyecto, por favor crea un fork y envía un pull request, o simplemente abre un issue con tus comentarios y sugerencias.
+
+## Autores
+
+- [PABLO TORRES] - Desarrollo inicial
