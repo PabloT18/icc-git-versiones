@@ -1,210 +1,206 @@
-# Practica GIT VERSIONES (TAGs)
 
+# GIT VERSIONS PRACTICE (TAGs)
 
 ## Getting Started
 
-Este proyecto es una práctica de cómo usar Git para control de versiones en un entorno de desarrollo Java. El proyecto incluye ejemplos simples de código Java y demuestra cómo manejar diferentes versiones usando tags anotados en Git.
+This project is a practical exercise on how to use Git for version control within a Java development environment. It includes simple Java code examples and demonstrates how to manage different versions using annotated tags in Git.
 
-## Requisitos
-- Java JDK 11 o superior
-- Git 2.20 o superior
+## Requirements
+- Java JDK 11 or higher
+- Git 2.20 or higher
 
+### Step 1: Create a Simple Java Project
 
-### Paso 1: Crear un Proyecto Simple de Java
-
-1. **Crear un directorio para tu proyecto:**
+1. **Create a directory for your project:**
    ```bash
-   mkdir MiProyectoJava
-   cd MiProyectoJava
+   mkdir MyJavaProject
+   cd MyJavaProject
    ```
 
-2. **Crear un archivo Java simple:**
-   Abre un editor de texto y crea un archivo llamado `Main.java`. Escribe el siguiente contenido en el archivo:
+2. **Create a simple Java file:**
+   Open a text editor and create a file named `Main.java`. Write the following content into the file:
    ```java
    public class Main {
        public static void main(String[] args) {
-           System.out.println("Hola, mundo!");
+           System.out.println("Hello, world!");
        }
    }
    ```
 
-3. **Compilar y ejecutar el programa Java:**
+3. **Compile and run the Java program:**
    ```bash
    javac Main.java
    java Main
    ```
 
-Se puede crear el proyecto directamente con VSCode
+This project could be created directly in VSCode.
 
-### Paso 2: Inicializar Git y Crear README
+### Step 2: Initialize Git and Create README
 
-1. **Inicializa el repositorio Git:**
+1. **Initialize the Git repository:**
    ```bash
    git init
    ```
 
-2. **Crear un archivo README:**
-   Abre otro archivo de texto y nómbralo `README.md`. Agrega información inicial sobre tu proyecto. Por ejemplo:
+2. **Create a README file:**
+   Open another text file and name it `README.md`. Add initial information about your project. For example:
    ```markdown
-   # Mi Proyecto Java
-   Este es un proyecto Java simple para demostrar el manejo de versiones con Git.
+   # My Java Project
+   This is a simple Java project to demonstrate version management with Git.
    ```
 
-3. **Añadir archivos al repositorio y hacer el primer commit:**
+3. **Add files to the repository and make the first commit:**
    ```bash
    git add Main.java README.md
-   git commit -m "Proyecto inicial con README"
+   git commit -m "Initial project with README"
    ```
 
-### Paso 3: Subir el Proyecto a un Repositorio Remoto
+### Step 3: Upload the Project to a Remote Repository
 
-1. **Crear un repositorio en GitHub** (o cualquier otro servicio de hosting Git). Debes tener una cuenta y luego crear un nuevo repositorio.
+1. **Create a repository on GitHub** (or any other Git hosting service). You must have an account and then create a new repository.
 
-2. **Conectar tu repositorio local con el remoto:**
+2. **Link your local repository with the remote:**
    ```bash
-   git remote add origin <URL_DEL_REPOSITORIO_REMOTO>
+   git remote add origin <REMOTE_REPOSITORY_URL>
    ```
 
-3. **Subir tu proyecto al repositorio remoto:**
+3. **Push your project to the remote repository:**
    ```bash
    git push -u origin master
    ```
 
-### Paso 4: Modificaciones y Manejo de Versiones
+### Step 4: Modifications and Version Management
 
-1. **Modificar el `README.md` y preparar para la versión v1.0.0:**
+1. **Modify the `README.md` and prepare for version v1.0.0:**
    ```markdown
-   # Mi Proyecto Java
-   Este es un proyecto Java simple para demostrar el manejo de versiones con Git.
+   # My Java Project
+   This is a simple Java project to demonstrate version management with Git.
 
    ## Version 1.0.0
-   - Versión inicial del proyecto.
+   - Initial version of the project.
    ```
 
-2. **Hacer commit de los cambios:**
+2. **Commit the changes:**
    ```bash
    git add README.md
-   git commit -m "Preparación para la versión 1.0.0"
+   git commit -m "Setup for version 1.0.0"
    ```
 
-3. **Crear un tag anotado y subirlo:**
+3. **Create an annotated tag and push it:**
    ```bash
    git tag -a v1.0.1 -m "App v1.0.1"
    git push origin v1.0.1
    ```
 
-### Paso 5: Repetir para Versiones Adicionales
+### Step 5: Repeat for Additional Versions
 
-Recuerada que adicional a la descripción especifica se debera modificar el `README.md` adicionando la informacion de la version 
+Remember, in addition to specific descriptions, you should modify the `README.md` by adding the information for the version:
 
    ```markdown
-   # Mi Proyecto Java
-   Este es un proyecto Java simple para demostrar el manejo de versiones con Git.
+   # My Java Project
+   This is a simple Java project to demonstrate version management with Git.
 
    ## Version 1.0.0
-   - Versión inicial del proyecto.
+   - Initial version of the project.
 
    ## Version X.X.X
-   - [Descripcion de la version ]
+   - [Description of the version]
    ```
 
-#### Versión v1.0.2: Estructura MVC y Clase de Modelo
+#### Version v1.0.2: MVC Structure and Model Class
 
-1. **Descripción:**
-   - Crea la estructura de carpetas MVC (Model-View-Controller).
-   - Añade una clase de tipo objeto (como `Persona`) en la carpeta de modelos con los métodos y atributos necesarios. No se permite Objetos `Persona`, `Vehiculo o Carro`
+1. **Description:**
+   - Create the MVC (Model-View-Controller) folder structure.
+   - Add an object type class (like `Person`) in the model folder with the necessary methods and attributes. Do not use `Person`, `Vehicle`, or `Car` objects.
 
-2. **Comandos de Git:**
+2. **Git Commands:**
    ```bash
    git add .
-   git commit -m "Agregada estructura MVC y clase modelo Object"
-   git tag -a v1.0.2 -m "Versión 1.0.2: Estructura MVC y modelo Object implementados"
-   git push 
+   git commit -m "Added MVC structure and model Object class"
+   git tag -a v1.0.2 -m "Version 1.0.2: MVC structure and model Object implemented"
+   git push
    git push origin --tags
    ```
 
+#### Version v1.0.3: Array of Objects Implementation
 
-#### Versión v1.0.3: Implementación de Arreglo de Objetos
+1. **Description:**
+   - Modify the main class to include an array of `Object`, initializing several objects with different values.
 
-1. **Descripción:**
-   - Modifica la clase principal para incluir un arreglo de objetos `Object`, inicializando varios objetos con diferentes valores.
-
-2. **Comandos de Git:**
+2. **Git Commands:**
    ```bash
    git add Main.java
-   git commit -m "[Mensaje adecuado]"
-   git tag -a v1.0.3 -m "Mensaje adecuado"
+   git commit -m "[Appropriate message]"
+   git tag -a v1.0.3 -m "Appropriate message"
    git push origin --tags
    ```
 
+#### Version v1.0.4: Functionality in Controllers and Views
 
+Perform two commits before making the TAG
 
-#### Versión v1.0.4: Funcionalidad en Controladores y Vistas
-Realizar dos commits antes de realizar el TAG
-1. **Descripción:**
-   - Crea una clase `ObjectController` con un método de búsqueda secuencial el cual reciba el arreglo, y el valor a buscar, es decir por algun valor de uno de los atributos del objeto.
+1. **Description:**
+   - Create an `ObjectController` class with a sequential search method that receives the array and the value to search for by some value of one of the object's attributes.
 
-2. **Comandos de Git:**
+2. **Git Commands:**
    ```bash
    git add .
-   git commit -m "[Mensaje adecuado]"
+   git commit -m "[Appropriate message]"
    git push
    ```
 
-3. **Descripción:**
-   - Añade una clase `ObjectView` para manejar la visualización de objetos `Object`.
+3. **Description:**
+   - Add an `ObjectView` class to handle the visualization of `Object` objects.
 
-
-4. **Comandos de Git:**
-   ```bash 
+4. **Git Commands:**
+   ```bash
    git add .
-   git commit -m "[Mensaje adecuado]"
-   git tag -a v1.0.4 -m "[Mensaje adecuado]"
+   git commit -m "[Appropriate message]"
+   git tag -a v1.0.4 -m "[Appropriate message]"
    git push
    git push --tags
    ```
 
-#### Versión v2.0.0: Integración y Pruebas Finales
+#### Version v2.0.0: Integration and Final Testing
 
-1. **Descripción:**
-   - Modifica la clase `Main` para integrar y probar las llamadas a los métodos de las clases `ObjectController` y `ObjectView`.
-   - Verifica que todo el sistema funcione correctamente.
+1. **Description:**
+   - Modify the `Main` class to integrate and test the calls to the methods of the `ObjectController` and `ObjectView` classes.
+   - Verify that the entire system works correctly.
 
-2. **Comandos de Git:**
+2. **Git Commands:**
    ```bash
    git add .
-   git commit -m "[Mensaje adecuado]"
-   git tag -a v2.0.0 -m "[Mensaje adecuado]"
+   git commit -m "[Appropriate message]"
+   tripoli
+   git tag -a v2.0.0 -m "[Appropriate message]"
    git push
    git push origin v2.0.0
    ```
 
+### Step 6. List Results
 
-### Paso 6. Listar resultados
-En una terminal ejecutar el sigueinte comando que lista la informacion de los tags creados 
+In a terminal, run the following command that lists the information of the created tags:
 
     ```bash
         git for-each-ref --sort=creatordate --format '%(refname:short) %(creatordate) %(contents:subject)' refs/tags
     ```
 
-Agregar en su README una captura de la salida del comando, tal como se muestra continuacion.
+Add a screenshot of the command output to your README as shown below.
 
+![Example Image](captura-tags.png)
 
-![Ejemplo de imagen](caputara-tags.png)
-
-Como se coloca imagenes en el readme con la sigueinte instrucción:
+How to place images in the README with the following instruction:
     
     ```bash
-     ![Ejemplo de imagen](caputara-tags.png)
+     ![Example Image](capture-tags.png)
     ```
 
-Revisar el paht de la imagen. 
+ * Check the path of the image.
 
+## Contribute
 
-## Contribuir
+To contribute to this project, please create a fork and send a pull request, or simply open an issue with your comments and suggestions.
 
-Para contribuir a este proyecto, por favor crea un fork y envía un pull request, o simplemente abre un issue con tus comentarios y sugerencias.
+## Authors
 
-## Autores
-
-- [PABLO TORRES] - Desarrollo inicial
+- [PABLO TORRES] - Initial development
