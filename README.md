@@ -179,6 +179,28 @@ Realizar dos commits antes de realizar el TAG
    git push origin v2.0.0
    ```
 
+
+### Paso 6. Listar resultados
+En una terminal ejecutar el sigueinte comando que lista la informacion de los tags creados 
+
+    ```bash
+        git for-each-ref --sort=creatordate --format '%(refname:short) %(creatordate) %(contents:subject)' refs/tags
+    ```
+
+Agregar en su README una captura de la salida del comando, tal como se muestra continuacion.
+
+
+![Ejemplo de imagen](caputara-tags.png)
+
+Como se coloca imagenes en el readme con la sigueinte instrucción:
+    
+    ```bash
+     ![Ejemplo de imagen](caputara-tags.png)
+    ```
+
+Revisar el paht de la imagen. 
+
+
 ## Contribuir
 
 Para contribuir a este proyecto, por favor crea un fork y envía un pull request, o simplemente abre un issue con tus comentarios y sugerencias.
