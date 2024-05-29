@@ -124,6 +124,60 @@ Recuerada que adicional a la descripción especifica se debera modificar el `REA
    ```
 
 
+#### Versión v1.0.3: Implementación de Arreglo de Objetos
+
+1. **Descripción:**
+   - Modifica la clase principal para incluir un arreglo de objetos `Object`, inicializando varios objetos con diferentes valores.
+
+2. **Comandos de Git:**
+   ```bash
+   git add Main.java
+   git commit -m "[Mensaje adecuado]"
+   git tag -a v1.0.3 -m "Mensaje adecuado"
+   git push origin --tags
+   ```
+
+
+
+#### Versión v1.0.4: Funcionalidad en Controladores y Vistas
+Realizar dos commits antes de realizar el TAG
+1. **Descripción:**
+   - Crea una clase `ObjectController` con un método de búsqueda secuencial el cual reciba el arreglo, y el valor a buscar, es decir por algun valor de uno de los atributos del objeto.
+
+2. **Comandos de Git:**
+   ```bash
+   git add .
+   git commit -m "[Mensaje adecuado]"
+   git push
+   ```
+
+3. **Descripción:**
+   - Añade una clase `ObjectView` para manejar la visualización de objetos `Object`.
+
+
+4. **Comandos de Git:**
+   ```bash 
+   git add .
+   git commit -m "[Mensaje adecuado]"
+   git tag -a v1.0.4 -m "[Mensaje adecuado]"
+   git push
+   git push --tags
+   ```
+
+#### Versión v2.0.0: Integración y Pruebas Finales
+
+1. **Descripción:**
+   - Modifica la clase `Main` para integrar y probar las llamadas a los métodos de las clases `ObjectController` y `ObjectView`.
+   - Verifica que todo el sistema funcione correctamente.
+
+2. **Comandos de Git:**
+   ```bash
+   git add .
+   git commit -m "[Mensaje adecuado]"
+   git tag -a v2.0.0 -m "[Mensaje adecuado]"
+   git push
+   git push origin v2.0.0
+   ```
 
 ## Contribuir
 
